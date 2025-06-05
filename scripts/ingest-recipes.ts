@@ -1,8 +1,15 @@
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+
+
 import fs from "fs/promises";
 import path from "path";
 import pdf from "pdf-parse";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
+
+console.log('URL:', process.env.NEXT_PUBLIC_SUPABASE_URL);
+console.log('ROLE:', process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
