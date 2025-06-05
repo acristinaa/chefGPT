@@ -16,7 +16,6 @@ export default function ChatInput({ onSubmit }: ChatInputProps) {
 
   return (
     <div className="space-y-6">
-      {/* Input Section */}
       <div className="relative">
         <label
           htmlFor="recipe-input"
@@ -40,7 +39,7 @@ export default function ChatInput({ onSubmit }: ChatInputProps) {
         </div>
       </div>
 
-      {/* Submit Button */}
+     
       <div className="flex justify-center">
         <button 
           onClick={handleSubmit}
